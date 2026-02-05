@@ -22,3 +22,13 @@ Provide the following CSV exports (not included in the repo):
 - outputs/tables/Table3_model_performance.csv
 - outputs/figures/*.png
 - outputs/predictions/Model_predictions_and_warning_zones.csv
+
+## Run in Google Colab (recommended)
+1. Open a new Colab notebook.
+2. Run this cell:
+
+```python
+!git clone https://github.com/Borino88/deforestation-risk-gialai.git
+%cd deforestation-risk-gialai
+!pip -q install -r requirements.txt
+
