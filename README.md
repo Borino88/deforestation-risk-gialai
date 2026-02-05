@@ -2,7 +2,7 @@
 
 This repository provides a reproducible pipeline for 1 km grid-based deforestation risk modeling in Gia Lai Province.
 
-## Inputs (not included in the repo)
+## Inputs 
 Upload these CSV exports to your Colab runtime (`/content/`):
 - KBang_TRAIN_master_rain_elev_lossyear.csv
 - KBang_TEST_master_rain_elev_lossyear.csv
