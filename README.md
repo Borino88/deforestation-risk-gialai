@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/1150227675.svg)](https://doi.org/10.5281/zenodo.18491114)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Borino88/deforestation-risk-gialai/blob/main/run_in_colab.ipynb)
 
 # Deforestation Risk Prediction (Gia Lai, Vietnam)
