@@ -1,3 +1,5 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Borino88/deforestation-risk-gialai/blob/main/run_in_colab.ipynb)
+
 # Deforestation Risk Prediction (Gia Lai, Vietnam)
 
 This repository provides a reproducible pipeline for 1 km grid-based deforestation risk modeling in Gia Lai Province.
