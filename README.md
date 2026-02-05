@@ -31,4 +31,18 @@ Provide the following CSV exports (not included in the repo):
 !git clone https://github.com/Borino88/deforestation-risk-gialai.git
 %cd deforestation-risk-gialai
 !pip -q install -r requirements.txt
+## Reproducible run (Google Colab)
+1) Open a new Colab notebook (or open `run_in_colab.ipynb` in this repo).
+2) Upload the 4 input CSV files to `/content/`:
+   - KBang_TRAIN_master_rain_elev_lossyear.csv
+   - KBang_TEST_master_rain_elev_lossyear.csv
+   - MangYang_TRAIN_master_rain_elev_lossyear.csv
+   - MangYang_TEST_master_rain_elev_lossyear.csv
+
+3) Run:
+```python
+!git clone https://github.com/Borino88/deforestation-risk-gialai.git
+%cd deforestation-risk-gialai
+!pip -q install -r requirements.txt
+
 
