@@ -1,0 +1,8 @@
+outputs/
+data/
+*.csv
+*.zip
+*.tif
+*.tiff
+__pycache__/
+.ipynb_checkpoints/
