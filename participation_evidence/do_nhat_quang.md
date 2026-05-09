@@ -1,14 +1,15 @@
-# Participation Record: Do Nhat Quang
+# Research Participation Record: Do Nhat Quang
 
-- **GitHub Username:** @quang0214adv-cpu
-- **Role:** Visualization and Map/Figure Support
-- **School:** Vinschool The Harmony
+- **GitHub:** @quang0214adv-cpu
+- **Role:** Co-Author (Visualization & Map Support)
+- **Institution:** Vinschool The Harmony
 
-### Core Contributions
-- **Spatial Output Review:** Evaluated the spatial distribution of the Random Forest risk scores to ensure logical clustering around infrastructure.
-- **Figure Organization:** Compiled and checked the ROC curves and Feature Importance charts in the `results/` folder for clarity and professional presentation.
-- **Warning Zone Validation:** Cross-referenced the generated warning-zone maps with known deforestation hotspots in Gia Lai Province.
+### Responsibilities & Contributions
+- **Spatial Visualization:** Reviewed the spatial distribution of risk probability maps to ensure alignment with topographic and road-proximity drivers.
+- **Figure Preparation:** Organized the export of ROC curves, Feature Importance bar charts, and coefficient plots for the Results section of the manuscript.
+- **Map Quality Control:** Verified that map legends, units (meters/kilometers), and coordinate systems were correctly represented in the final outputs.
+- **Warning Zone Analysis:** Assisted in the visual validation of the top 10% risk warning zones against historical forest loss patterns in Gia Lai.
 
-### Ongoing Tasks
-- [ ] Review updated figure exports.
-- [ ] Confirm map legend consistency.
+### Status
+- [x] Figure organization finalized.
+- [x] Risk map visual verification complete.

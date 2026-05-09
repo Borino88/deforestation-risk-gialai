@@ -1,15 +1,15 @@
-# Research & Validation Notes
+# Technical Observations & Research Notes
 
-This file contains observations and validation notes from the research team during the model evaluation and figure review phase.
+This document serves as an internal log for the research team to maintain transparent records of model behavior, data validation findings, and environmental observations during the pilot study in Gia Lai Province.
 
-## Pipeline & Coordination (Pham Duy Long)
-- *Note:* [Lead researcher to add notes here]
+## 1. Pipeline & Coordination (Pham Duy Long)
+- **Observation:** [Lead researcher to document coordination notes regarding model hyperparameter stability]
 
-## Model Validation (Nguyen Duc Anh)
-- *Note:* [Validation researcher to add notes here]
+## 2. Model Validation (Nguyen Duc Anh)
+- **Observation:** [Validation researcher to document cross-check results between local runs and paper summary tables]
 
-## Visualization & Maps (Do Nhat Quang)
-- *Note:* [Visualization researcher to add notes here]
+## 3. Visualization & Maps (Do Nhat Quang)
+- **Observation:** [Visualization researcher to document review notes on spatial prediction clustering and legend accuracy]
 
-## Reproducibility & Environment (Nguyen Vu Huy)
-- *Note:* [Reproducibility researcher to add notes here]
+## 4. Reproducibility & Environment (Nguyen Vu Huy)
+- **Observation:** [Reproducibility researcher to document test results of the one-click Colab workflow across different browser environments]
