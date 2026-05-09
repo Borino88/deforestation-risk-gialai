@@ -1,8 +1,10 @@
 outputs/
-data/
-*.csv
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
 *.zip
 *.tif
 *.tiff
-__pycache__/
-.ipynb_checkpoints/
+# Allow master tables for reproducibility
+!data/*.csv
+!results/*.csv
