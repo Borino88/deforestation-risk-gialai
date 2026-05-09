@@ -8,15 +8,14 @@ This repository contains the interpretable machine learning pipeline for defores
 ## Research Overview
 The project focuses on K’Bang and Mang Yang districts in Gia Lai Province, Vietnam. It integrates multi-source datasets (Hansen GFC, Sentinel-2, CHIRPS, SRTM) to predict forest loss risk using Logistic Regression and Random Forest models.
 
-## Contributors
-| Name | Role | GitHub |
-| :--- | :--- | :--- |
-| **Pham Duy Long** | First Author | [@pdlong-09](https://github.com/pdlong-09) |
-| **Nguyen Vu Huy** | Co-Author | [@bob-the-guy](https://github.com/bob-the-guy) |
-| **Nguyen Duc Anh** | Co-Author | [@nnda29](https://github.com/nnda29) |
-| **Do Nhat Quang** | Co-Author | [@quang0214adv-cpu](https://github.com/quang0214adv-cpu) |
+## Research Team and Contributions
+This project is developed by a team of student researchers. Each member is responsible for a core part of the research workflow:
+- **Pham Duy Long:** Coordination, model pipeline, and manuscript.
+- **Nguyen Vu Huy:** Reproducibility, Colab environment, and data paths.
+- **Nguyen Duc Anh:** Data validation and model metric verification.
+- **Do Nhat Quang:** Visualization, risk-map outputs, and figures.
 
-For a full list of contributors and affiliations, see [CONTRIBUTORS.md](./CONTRIBUTORS.md).
+A detailed record of contributions and participation evidence is available in [CONTRIBUTORS.md](./CONTRIBUTORS.md).
 
 ## Repository Structure
 - `data/`: Input CSV files (Master tables for training/testing).
