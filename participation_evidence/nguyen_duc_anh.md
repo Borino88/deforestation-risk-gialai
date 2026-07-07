@@ -1,6 +1,6 @@
 # Research Participation Record: Nguyen Duc Anh
 
-- **GitHub:** @nnda29
+- **GitHub:** @ngda29
 - **Role:** Co-Author (Data Validation & Model Evaluation)
 - **Institution:** Foreign Language Specialized School
 
