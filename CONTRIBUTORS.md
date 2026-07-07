@@ -4,7 +4,7 @@ This project is a collaborative research effort between student researchers and 
 
 | Name | Role | Institution | Documentation |
 | :--- | :--- | :--- | :--- |
-| **Pham Duy Long** | Lead Student Researcher / Corresponding Author | The Olympia School | [Evidence](./participation_evidence/pham_duy_long.md) |
+| **Pham Duy Long** | Lead Student Researcher / Corresponding Author | The Olympia School | [Evidence](./participation_evidence/pham_duy_long.md) | 
 | **Nguyen Vu Huy** | Co-Author (Data Preparation & Reproducibility) | Vinschool The Harmony, Hanoi | [Evidence](./participation_evidence/nguyen_vu_huy.md) |
 | **Nguyen Duc Anh** | Co-Author (Data Validation & Model Evaluation) | Foreign Language Specialized School | [Evidence](./participation_evidence/nguyen_duc_anh.md) |
 | **Do Nhat Quang** | Co-Author (Visualization & Map Support) | Vinschool The Harmony | [Evidence](./participation_evidence/do_nhat_quang.md) |
