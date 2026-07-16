@@ -1,6 +1,6 @@
 # Research Participation Record: Pham Duy Long
 
-- **GitHub:** @pdlong-09
+- **GitHub:** @pdlong-09 
 - **Role:** Lead Student Researcher / Corresponding Author
 - **Institution:** The Olympia School
 
