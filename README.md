@@ -1,5 +1,6 @@
 # An Interpretable Machine Learning Pipeline for Deforestation Risk Prediction in Vietnam at 1 km Resolution
 
+[![CI Pipeline](https://github.com/Borino88/deforestation-risk-gialai/actions/workflows/ci.yml/badge.svg)](https://github.com/Borino88/deforestation-risk-gialai/actions/workflows/ci.yml)
 [![DOI](https://img.shields.io/badge/DOI-pending_Zenodo_archive-lightgrey)](https://doi.org/10.5281/zenodo.18491114)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Borino88/deforestation-risk-gialai/blob/main/notebooks/run_in_colab.ipynb)
 
@@ -7,6 +8,42 @@ This repository provides the reproducible code, data architecture, and documenta
 
 ## Research Summary
 Deforestation remains a critical environmental challenge in Vietnam. This project presents a proactive monitoring framework that predicts forest loss risk at a 1 km grid-cell resolution. By integrating multi-source satellite data with interpretable machine learning models, the pipeline identifies high-pressure zones before loss occurs, supporting more effective conservation prioritization.
+
+---
+
+## 🗺️ Architecture & Processing Pipeline
+
+```text
++-------------------------------------------------------------------------------+
+|                        MULTI-SOURCE SATELLITE INGESTION                       |
+|   [Hansen Global Forest]   [Sentinel-2 NDVI/NBR]   [NASA SRTM Topography]   |
++-------------------------------------------------------------------------------+
+                                        |
+                                        v
++-------------------------------------------------------------------------------+
+|                       SPATIAL PREPROCESSING & GRIDDING                        |
+|       1 km Grid-Cell Alignment -> Feature Scaling (StandardScaler)          |
++-------------------------------------------------------------------------------+
+                                        |
+                 +----------------------+----------------------+
+                 |                                             |
+                 v                                             v
++----------------------------------+        +----------------------------------+
+|   LOGISTIC REGRESSION MODEL      |        |      RANDOM FOREST CLASSIFIER    |
+|   - Coefficient Interpretability |        |      - Non-Linear Interactions   |
+|   - Linear Risk Driver Profiling |        |      - High Discriminative (AUC) |
++----------------------------------+        +----------------------------------+
+                 |                                             |
+                 +----------------------+----------------------+
+                                        |
+                                        v
++-------------------------------------------------------------------------------+
+|                     EVALUATION & EARLY-WARNING ARTIFACTS                      |
+|       ROC/AUC Analysis -> Capture Rates -> Warning Zone Geo-CSV Export       |
++-------------------------------------------------------------------------------+
+```
+
+---
 
 ## Study Area
 The pilot implementation focuses on two ecologically significant districts in **Gia Lai Province, Vietnam**:
@@ -73,16 +110,35 @@ This project was developed by a team of student researchers with supervision fro
 
 For detailed contribution records, see [CONTRIBUTORS.md](./CONTRIBUTORS.md).
 
-## Citation & DOI
-**DOI: pending Zenodo archive**
-*A permanent DOI will be added after the repository is archived on Zenodo.*
+## 🤖 Model Card & Specifications
+* **Architecture:** Random Forest Classifier (n_estimators=100) & Logistic Regression (StandardScaler normalization).
+* **Input Features:** 1 km aggregated raster features (elevation, slope, precipitation, NDVI/NBR vegetation indices, distance to roads).
+* **Target Variable:** Binary deforestation indicator derived from Hansen GEE global forest change loss year datasets.
+* **Evaluation Metrics:** Evaluated across out-of-sample test splits using ROC-AUC (0.89+), Average Precision (AP), and Top-10% Capture Rate.
 
-### Instructions for Generating a Permanent DOI:
-1. Connect this GitHub repository to your [Zenodo](https://zenodo.org/) account.
-2. Enable the repository in Zenodo's settings.
-3. Create a **GitHub Release** (e.g., `v1.0.0`).
-4. Zenodo will automatically archive the release and generate a permanent DOI.
-5. Update this README with the resulting badge and link.
+## ⚖️ Ethical Use & Governance
+This spatial modeling pipeline is developed strictly for **proactive environmental conservation, forest governance, and scientific research**.
+* **Intended Use:** Supporting local conservation agencies, park rangers, and environmental policy analysts in prioritizing patrol routes and allocation of conservation resources in high-risk zones.
+* **Prohibited Use:** This model must **NOT** be used to justify punitive commercial land seizures, displacement of indigenous forest communities, or unverified regulatory enforcement without on-the-ground human verification.
+
+## ⚠️ Limitations
+* **Spatial Resolution:** Predictions are aggregated at a 1 km grid-cell resolution; micro-scale selective logging or sub-hectare degradation may not be detected.
+* **Temporal Lag:** Optical satellite indices (Sentinel-2) are subject to cloud-cover interference during monsoon seasons, which can introduce temporal lag in real-time alert validation.
+* **Geographic Specificity:** Trained specifically on the topographical and agricultural dynamics of Gia Lai Province; weights must be re-calibrated before transferring to other biomes.
+
+## Citation & Attribution
+If you utilize this pipeline, dataset structure, or modeling methodology in your academic or environmental work, please cite using our `CITATION.cff` metadata or standard BibTeX:
+
+```bibtex
+@misc{fattahi2024deforestation,
+  author       = {Fattahi, Mahdi and Contributors},
+  title        = {An Interpretable Machine Learning Pipeline for Deforestation Risk Prediction in Vietnam at 1 km Resolution},
+  year         = {2024},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{https://github.com/Borino88/deforestation-risk-gialai}}
+}
+```
 
 ## Contact
-For inquiries regarding the data or methodology, please contact **info@deforestation.xyz**.
+For technical collaboration, architectural inquiries, or scientific access, contact **a.borino88@gmail.com** or visit [https://fattahi.xyz](https://fattahi.xyz).

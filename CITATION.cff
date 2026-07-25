@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software or data processing pipeline in academic research, please cite it as below."
+authors:
+  - family-names: "Fattahi"
+    given-names: "Mahdi"
+    email: "a.borino88@gmail.com"
+title: "Predicting and Mapping Deforestation Risk in Gia Lai Province, Vietnam Using Machine Learning"
+version: 1.0.0
+date-released: 2024-06-01
+url: "https://github.com/Borino88/deforestation-risk-gialai"
+repository-code: "https://github.com/Borino88/deforestation-risk-gialai"
+license: MIT
+keywords:
+  - "deforestation"
+  - "machine learning"
+  - "geospatial analysis"
+  - "vietnam"
+  - "random forest"
+  - "logistic regression"
+  - "spatial modeling"
