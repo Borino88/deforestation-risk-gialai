@@ -1,8 +1,9 @@
 # An Interpretable Machine Learning Pipeline for Deforestation Risk Prediction in Vietnam at 1 km Resolution
 
-[![CI Pipeline](https://github.com/Borino88/deforestation-risk-gialai/actions/workflows/ci.yml/badge.svg)](https://github.com/Borino88/deforestation-risk-gialai/actions/workflows/ci.yml)
+[![CI Pipeline](https://github.com/Borino88/deforestation-risk-vietnam/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/Borino88/deforestation-risk-vietnam/actions/workflows/docker-publish.yml)
+[![Docker Hub](https://img.shields.io/docker/v/borino88/deforestation-risk-vietnam?label=docker&logo=docker)](https://hub.docker.com/r/borino88/deforestation-risk-vietnam)
 [![DOI](https://img.shields.io/badge/DOI-pending_Zenodo_archive-lightgrey)](https://doi.org/10.5281/zenodo.18491114)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Borino88/deforestation-risk-gialai/blob/main/notebooks/run_in_colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Borino88/deforestation-risk-vietnam/blob/main/notebooks/run_in_colab.ipynb)
 
 This repository provides the reproducible code, data architecture, and documentation for the research paper: **"An Interpretable Machine Learning Pipeline for Deforestation Risk Prediction in Vietnam at 1 km Resolution."** 
 
@@ -76,15 +77,22 @@ We evaluate and compare three distinct modeling approaches:
 
 ## Reproducible Run (One-Click)
 The easiest way to reproduce the research findings is through Google Colab:
-1. Open the [notebooks/run_in_colab.ipynb](https://colab.research.google.com/github/Borino88/deforestation-risk-gialai/blob/main/notebooks/run_in_colab.ipynb).
+1. Open the [notebooks/run_in_colab.ipynb](https://colab.research.google.com/github/Borino88/deforestation-risk-vietnam/blob/main/notebooks/run_in_colab.ipynb).
 2. Follow the "Run All" command. The notebook automatically synchronizes with this repository, installs dependencies, and executes the full model pipeline.
+
+## Docker Quick-Start (Recommended)
+Run the complete scientific pipeline instantly using the prebuilt multi-stage Docker container:
+```bash
+# Pull and execute the hardened non-root container pipeline
+docker run --rm -v $(pwd)/outputs:/app/outputs borino88/deforestation-risk-vietnam:latest
+```
 
 ## Local Installation
 To run the pipeline in a local Python environment:
 ```bash
 # Clone the repository
-git clone https://github.com/Borino88/deforestation-risk-gialai.git
-cd deforestation-risk-gialai
+git clone https://github.com/Borino88/deforestation-risk-vietnam.git
+cd deforestation-risk-vietnam
 
 # Install dependencies
 pip install -r requirements.txt
