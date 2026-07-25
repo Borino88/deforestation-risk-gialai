@@ -26,5 +26,7 @@ jobs:
         pip install pytest pytest-cov
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run unit tests with pytest
+      env:
+        PYTHONPATH: .
       run: |
         pytest tests/ -v
