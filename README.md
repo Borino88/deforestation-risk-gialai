@@ -63,7 +63,33 @@ The pipeline leverages publicly available environmental and infrastructure datas
 We evaluate and compare three distinct modeling approaches:
 1. **Baseline Risk Score:** A proximity-weighted heuristic for initial benchmarking.
 2. **Logistic Regression:** Used for scientific interpretability of risk drivers (coefficients).
-3. **Random Forest:** Capable of capturing complex, non-linear interactions for high discriminative performance (AUC = 0.89).
+3. **Random Forest:** Capable of capturing complex, non-linear interactions for high discriminative performance (AUC = 0.942).
+
+## Model Performance & Validation Results
+The performance of the models is evaluated across out-of-sample test splits and spatial area-transfer scenarios:
+
+### Scenario 1: Provided Split (Out-of-sample validation)
+* **Logistic Regression:**
+  * AUC: `0.931`
+  * AP: `0.926`
+  * F1: `0.881`
+  * Capture@10%: `0.190`
+* **Random Forest:**
+  * AUC: `0.942`
+  * AP: `0.914`
+  * F1: `0.878`
+  * Capture@10%: `0.184`
+
+### Scenario 2: Area Transfer (K’Bang → Mang Yang)
+* **Logistic Regression:**
+  * AUC: `0.743`
+  * Capture@10%: `0.170`
+* **Random Forest:**
+  * AUC: `0.767`
+  * Capture@10%: `0.145`
+
+> [!IMPORTANT]
+> The values in [results/Table3_model_performance_HansenLoss.csv](./results/Table3_model_performance_HansenLoss.csv) correspond to Table 3 of the finalized manuscript and supersede the earlier development-run results previously displayed on deforestation.xyz.
 
 ## Repository Structure
 ```text
@@ -122,7 +148,7 @@ For detailed contribution records, see [CONTRIBUTORS.md](./CONTRIBUTORS.md).
 * **Architecture:** Random Forest Classifier (n_estimators=100) & Logistic Regression (StandardScaler normalization).
 * **Input Features:** 1 km aggregated raster features (elevation, slope, precipitation, NDVI/NBR vegetation indices, distance to roads).
 * **Target Variable:** Binary deforestation indicator derived from Hansen GEE global forest change loss year datasets.
-* **Evaluation Metrics:** Evaluated across out-of-sample test splits using ROC-AUC (0.89+), Average Precision (AP), and Top-10% Capture Rate.
+* **Evaluation Metrics:** Evaluated across out-of-sample test splits using ROC-AUC (0.94+), Average Precision (AP), and Top-10% Capture Rate.
 
 ## ⚖️ Ethical Use & Governance
 This spatial modeling pipeline is developed strictly for **proactive environmental conservation, forest governance, and scientific research**.
